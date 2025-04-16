@@ -4,3 +4,5 @@
 # git branch -M main
 # git remote add origin https://github.com/Wlwool/Git_test_proj.git
 # git push -u origin main
+
+print("Привет из main")
