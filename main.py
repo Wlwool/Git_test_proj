@@ -5,9 +5,9 @@
 # git remote add origin https://github.com/Wlwool/Git_test_proj.git
 # git push -u origin main
 
-<<<<<<< HEAD
+
 print("Из обеих веток конфликт разрешен")
-=======
+
 class ListWrapper(list):
     def __init__(self, iterable):
         self._list = list(iterable)
@@ -24,4 +24,6 @@ class ListWrapper(list):
 wrapper = ListWrapper([1, 2, 3])
 print(wrapper)          # Вывод: ListWrapper (length: 3, elements: [1, 2, 3])
 print(wrapper[0])
->>>>>>> 64b99f4 (.gitignore)
+
+
+print("Привет из branch-a")
