@@ -11,13 +11,13 @@ class Stack:
     def push(self, element):
         self.stack.append(element)
 
+    def is_empty(self):
+        return len(self.stack) == 0
+
     def pop(self):
         if self.is_empty():
             raise StackEmptyError("Стек пуст!")
         return self.stack.pop()
-
-    def is_empty(self):
-        return len(self.stack) == 0
 
     def __repr__(self):
         return f"Stack<size={len(self.stack)}>"
@@ -26,14 +26,17 @@ class Stack:
 class StackEmptyError(Exception):
     pass
 
+stack = Stack()
+stack.push(1)
+print(stack)
+stack.pop()
+print(stack)
 
 stack = Stack()
 print(stack)
 stack.push(1)
 print(stack)
 stack.push(2)
-print(stack)
-print(stack.pop())
 print(stack)
 print(stack.pop())
 print(stack)
