@@ -1,1 +1,2 @@
 stroka 1
+изменение из branch-a
