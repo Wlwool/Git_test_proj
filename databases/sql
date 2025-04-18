@@ -1,0 +1,22 @@
+Имя сотрудника.
+Название отдела, где он работает.
+Среднюю зарплату по его отделу.
+Условие: сотрудники, чья зарплата выше средней в их отделе.
+
+SELECT
+    employees.name,
+    employees.department
+    departments_avg.avg_salary
+FROM employers e
+JOIN (
+    SELECT
+        department,
+        AVG(salary) AS avg_salary
+    FROM employers
+    GROUP BY department
+) departments_avg ON e.department = departments_avg.department
+WHERE e.salary > departments_avg.avg_salary;
+
+Подзапрос dep_avg вычисляет среднюю зарплату по отделам.
+JOIN связывает основную таблицу с результатами подзапроса.
+WHERE фильтрует сотрудников, чья зарплата выше средней по их отделу.
