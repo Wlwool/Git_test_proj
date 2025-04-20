@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: booksdb
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  parser:
+    image: python:3.11-slim
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+      - ./books.csv:/data/books.csv:ro
+    working_dir: /app
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: booksdb
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+    entrypoint: >
+      sh -c "
+        pip install -r requirements.txt &&
+        until pg_isready -h db -U \"$POSTGRES_USER\"; do sleep 1; done &&
+        python load_csv_to_db.py
+      "
+
+volumes:
+  db-data: {}
