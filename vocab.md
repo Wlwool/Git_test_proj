@@ -12,4 +12,6 @@ variables - переменные
 definition - определение, формулировка  
 achieved - достигать  
 performed - выполнять, делать  
-
+parsing - анализ, извлечение данных
+The request is throttled - Количество запросов превышено
+corresponds - соответствовать, совпадать
