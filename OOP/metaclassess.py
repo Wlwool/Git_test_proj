@@ -13,4 +13,4 @@ class NoDigitAttrMeta(type):
 
 
 class MyClass(metaclass=NoDigitAttrMeta):
-    2bad = 10
+    bad = 10
