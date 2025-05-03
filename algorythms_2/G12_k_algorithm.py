@@ -48,9 +48,9 @@ for k in [1, 3, 5]:
     results[k] = [knn(dataset, point, k) for point in test_points]
 
 # Вывод результатов
-for k, preds in results.items():
+for k, predicts in results.items():
     print(f"k = {k}:")
-    for pt, label in zip(test_points, preds):
+    for pt, label in zip(test_points, predicts):
         print(f"  Точка {pt} -> Класс {label}")
     print()
 
