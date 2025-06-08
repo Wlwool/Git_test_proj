@@ -191,3 +191,21 @@ INNER JOIN boxoffice
 ```
 SELECT title FROM movies WHERE year % 2 = 0;
 ```
+
+# Lesson 10: Queries with aggregates (Pt. 1)
+
+Exercise 10 — Tasks
+
+1. Find the longest time that an employee has been at the studio 
+```sql
+SELECT MAX(Years_employed) FROM employees;
+```
+2. For each role, find the average number of years employed by employees in that role
+```sql
+SELECT Role, AVG(Years_employed) AS Average_Years FROM Employees GROUP BY Role;
+```
+3. Find the total number of employee years worked in each building
+```sql
+SELECT DISTINCT Building, SUM(Years_employed) FROM Employees
+GROUP BY Building;
+```
