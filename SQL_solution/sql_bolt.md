@@ -206,3 +206,52 @@ SELECT Role, AVG(Years_employed) AS Average_Years FROM Employees GROUP BY Role;
 SELECT DISTINCT Building, SUM(Years_employed) FROM Employees
 GROUP BY Building;
 ```
+
+# Lesson 11: Queries with aggregates (Pt. 2)
+1. Find the number of Artists in the studio (without a HAVING clause)
+```sql
+SELECT COUNT(*) FROM employees
+WHERE Role LIKE "Artist";
+```
+2. Find the number of Employees of each role in the studio
+```sql
+SELECT DISTINCT Role, COUNT(*) FROM employees
+GROUP BY Role;
+```
+3. Find the total number of years employed by all Engineers.
+```sql
+SELECT Role, SUM(Years_employed) FROM Employees
+GROUP BY Role
+HAVING Role = 'Engineer';
+```
+
+# Lesson 12: Order of execution of a Query
+1. Find the number of movies each director has directed
+```sql
+SELECT Director, COUNT(Title) AS Amount_of_Movies FROM Movies 
+GROUP BY Director;
+```
+2. Find the total domestic and international sales that can be attributed to each director
+```sql
+SELECT Director, SUM(Domestic_sales + International_sales) AS Sales FROM Movies 
+INNER JOIN Boxoffice  ON
+Movies.Id = Boxoffice.Movie_id
+GROUP BY Director;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
