@@ -239,6 +239,54 @@ Movies.Id = Boxoffice.Movie_id
 GROUP BY Director;
 ```
 
+# Lesson 13: Inserting rows
+1. Add the studio's new production, Toy Story 4 to the list of movies (you can use any director)
+```sql
+INSERT INTO Movies VALUES (4, 'Toy Story 4', 'John Lasseter', 2000,101);
+```
+2. Toy Story 4 has been released to critical acclaim! It had a rating of 8.7, and made 340 million 
+    domestically and 270 million internationally. Add the record to the BoxOffice table.
+```sql
+INSERT INTO Boxoffice VALUES(4,8.7,340000000,270000000);
+```
+
+# Lesson 14: Updating rows
+1. The director for A Bug's Life is incorrect, it was actually directed by John Lasseter
+```sql
+UPDATE Movies
+SET Director = 'John Lasseter'
+WHERE Id = 2;
+```
+OR
+```sql
+UPDATE Movies
+SET Director = 'John Lasseter'
+WHERE Title = "A Bug's Life";
+```
+
+2. The year that Toy Story 2 was released is incorrect, it was actually released in 1999
+```sql
+UPDATE Movies
+SET Year = '1999'
+WHERE Title = 'Toy Story 2'
+```
+3. Both the title and director for Toy Story 8 is incorrect! The title should be "Toy Story 3" 
+    and it was directed by Lee Unkrich
+```sql
+UPDATE Movies
+SET Title = 'Toy Story 3', Director = 'Lee Unkrich'
+WHERE Movies.Id = 11;
+```
+
+# Lesson 15: Deleting rows
+1. This database is getting too big, lets remove all movies that were released before 2005.
+```sql
+DELETE FROM Movies WHERE Year < 2005;
+```
+2. Andrew Stanton has also left the studio, so please remove all movies directed by him.
+```sql
+DELETE FROM Movies WHERE Director = 'Andrew Stanton';
+```
 
 
 
