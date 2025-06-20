@@ -1,40 +1,36 @@
-- scoped - охватываемый
-- treats lines - обрабатывает строки  
-- continuation - продолжение  
-- compatibility - совместимость  
-- subsequent - последующий, более поздний  
-- treated - очищать, лечить, рассматривать
-- appear - фигурировать, казаться, появляться, проявляться  
-- processed - обработанный прич, обрабатывать, перерабатывать гл  
-- recognized - распознавать, признавать
-- definition - определение, формулировка  
-- achieved - достигать  
-- performed - выполнять, делать  
-- parsing - анализ, извлечение данных  
-- The request is throttled - Количество запросов превышено  
-- corresponds - соответствовать, совпадать
-- property - собственность, свойство
-- distinct - отчетливый, определенный, явный
-- offset - смещение, компенсация
-- node - узел, вершина
-- angular - угловой, угловатый
-- greedy - жадный
-- increment - прирост, приращение, шаг, надбавка
-- resolve - разрешать, разрешить
-- attachment - привязанность, вложенный
-- permutations - перестановка, подстановка
-- embedding - встраивание, включение, внедрение
-- embed - встроить, внедрить
-- discretion - осмотрительность, усмотрение, благоразумие
-- implementation - реализация, осуществление, исполнение
-- builtin - встроенный
-- deprecating - протестовать, возражать
-- indicate - указывать, свидетельствовать, показывать
-- extension - расширение, продление, вытягивание
-- comprehension - понимание, понятливость
-- inlining - встраивание, вставка
-
+- **scoped** <details><summary>перевод</summary>охватываемый</details>
+- **treats lines** <details><summary>перевод</summary>обрабатывает строки</details>
 - **continuation** <details><summary>перевод</summary>продолжение</details>
 - **compatibility** <details><summary>перевод</summary>совместимость</details>
 - **subsequent** <details><summary>перевод</summary>последующий, более поздний</details>
 - **treated** <details><summary>перевод</summary>очищать, лечить, рассматривать</details>
+- **appear** <details><summary>перевод</summary>фигурировать, казаться, появляться, проявляться</details>
+- **processed** <details><summary>перевод</summary>обработанный прич, обрабатывать, перерабатывать гл</details>
+- **recognized** <details><summary>перевод</summary>распознавать, признавать</details>
+- **definition** <details><summary>перевод</summary>определение, формулировка</details>
+- **achieved** <details><summary>перевод</summary>достигать</details>
+- **performed** <details><summary>перевод</summary>выполнять, делать</details>
+- **parsing** <details><summary>перевод</summary>анализ, извлечение данных</details>
+- **The request is throttled** <details><summary>перевод</summary>Количество запросов превышено</details>
+- **corresponds** <details><summary>перевод</summary>соответствовать, совпадать</details>
+- **property** <details><summary>перевод</summary>собственность, свойство</details>
+- **distinct** <details><summary>перевод</summary>отчетливый, определенный, явный</details>
+- **offset** <details><summary>перевод</summary>смещение, компенсация</details>
+- **node** <details><summary>перевод</summary>узел, вершина</details>
+- **angular** <details><summary>перевод</summary>угловой, угловатый</details>
+- **greedy** <details><summary>перевод</summary>жадный</details>
+- **increment** <details><summary>перевод</summary>прирост, приращение, шаг, надбавка</details>
+- **resolve** <details><summary>перевод</summary>разрешать, разрешить</details>
+- **attachment** <details><summary>перевод</summary>привязанность, вложенный</details>
+- **permutations** <details><summary>перевод</summary>перестановка, подстановка</details>
+- **embedding** <details><summary>перевод</summary>встраивание, включение, внедрение</details>
+- **embed** <details><summary>перевод</summary>встроить, внедрить</details>
+- **discretion** <details><summary>перевод</summary>осмотрительность, усмотрение, благоразумие</details>
+- **implementation** <details><summary>перевод</summary>реализация, осуществление, исполнение</details>
+- **builtin** <details><summary>перевод</summary>встроенный</details>
+- **deprecating** <details><summary>перевод</summary>протестовать, возражать</details>
+- **indicate** <details><summary>перевод</summary>указывать, свидетельствовать, показывать</details>
+- **extension** <details><summary>перевод</summary>расширение, продление, вытягивание</details>
+- **comprehension** <details><summary>перевод</summary>понимание, понятливость</details>
+- **inlining** <details><summary>перевод</summary>встраивание, вставка</details>
+-
