@@ -1,4 +1,4 @@
-- scoped - <summary>охватываемый </summary>
+- scoped - охватываемый
 - treats lines - обрабатывает строки  
 - continuation - продолжение  
 - compatibility - совместимость  
@@ -33,4 +33,8 @@
 - extension - расширение, продление, вытягивание
 - comprehension - понимание, понятливость
 - inlining - встраивание, вставка
-- 
+
+- **continuation** <details><summary>перевод</summary>продолжение</details>
+- **compatibility** <details><summary>перевод</summary>совместимость</details>
+- **subsequent** <details><summary>перевод</summary>последующий, более поздний</details>
+- **treated** <details><summary>перевод</summary>очищать, лечить, рассматривать</details>
