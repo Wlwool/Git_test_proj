@@ -1,4 +1,4 @@
-- scoped - охватываемый  
+- scoped - <summary>охватываемый </summary>
 - treats lines - обрабатывает строки  
 - continuation - продолжение  
 - compatibility - совместимость  
@@ -32,5 +32,5 @@
 - indicate - указывать, свидетельствовать, показывать
 - extension - расширение, продление, вытягивание
 - comprehension - понимание, понятливость
-- inlining - встраивание
+- inlining - встраивание, вставка
 - 
