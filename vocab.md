@@ -18,7 +18,6 @@
 - **offset** <details><summary>перевод</summary>смещение, компенсация</details>
 - **node** <details><summary>перевод</summary>узел, вершина</details>
 - **angular** <details><summary>перевод</summary>угловой, угловатый</details>
-- **greedy** <details><summary>перевод</summary>жадный</details>
 - **increment** <details><summary>перевод</summary>прирост, приращение, шаг, надбавка</details>
 - **resolve** <details><summary>перевод</summary>разрешать, разрешить</details>
 - **attachment** <details><summary>перевод</summary>привязанность, вложенный</details>
