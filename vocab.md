@@ -32,4 +32,8 @@
 - **extension** <details><summary>перевод</summary>расширение, продление, вытягивание</details>
 - **comprehension** <details><summary>перевод</summary>понимание, понятливость</details>
 - **inlining** <details><summary>перевод</summary>встраивание, вставка</details>
--
+- **attachments** <details><summary>перевод</summary>привязанность, присоединение, приставка</details>
+- **expression** <details><summary>перевод</summary>выражение</details>
+- **indent** <details><summary>перевод</summary>отступ, подпункт</details>
+- **reference** <details><summary>перевод</summary>ссылка, ориентир</details>
+- *
