@@ -1,6 +1,6 @@
 # README
 
-![Code Quality](https://github.com/ваш-username/ваш-репозиторий/workflows/Code%20Quality%20Checks/badge.svg)
+![Code Quality](https://github.com/Wlwool/Git_test_proj/workflows/Code%20Quality%20Checks/badge.svg)
 
 ```
 
