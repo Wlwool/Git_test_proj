@@ -1,6 +1,7 @@
+# .github/workflows/checks.yml
+
 name: Code Quality Checks
 
-# Когда запускать проверки
 on:
   push:
     branches: [ main, master, develop ]
@@ -10,19 +11,19 @@ on:
 jobs:
   code-quality:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.13"]
 
     steps:
-    # Скачиваем код из репозитория
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # Устанавливаем Python
-    - name: Set up Python
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
       with:
-        python-version: '3.13'
+        python-version: ${{ matrix.python-version }}
 
-    # Кешируем зависимости для ускорения
     - name: Cache pip dependencies
       uses: actions/cache@v3
       with:
@@ -31,40 +32,26 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
 
-    # Устанавливаем зависимости
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements-dev.txt
-        # Если есть основные зависимости проекта
-        # pip install -r requirements.txt
 
-    # Проверка форматирования с Black
     - name: Check code formatting with Black
       run: black --check --diff .
 
-    # Проверка сортировки импортов
     - name: Check import sorting with isort
       run: isort --check-only --diff .
 
-    # Проверка стиля кода с flake8
     - name: Lint with flake8
       run: flake8 .
 
-    # Проверка типов с mypy
     - name: Type checking with mypy
-      run: mypy . --ignore-missing-imports
-      # Продолжаем даже если mypy найдет ошибки (опционально)
+      run: mypy .
       continue-on-error: true
 
-    # Альтернативно: запуск всех проверок через pre-commit
-    # - name: Run pre-commit hooks
-    #   run: pre-commit run --all-files
-
-  # Дополнительная job для тестов (если есть)
   tests:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -78,10 +65,8 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pytest pytest-cov
-        # pip install -r requirements.txt
 
-    # Запуск тестов (если есть)
     - name: Run tests
       run: |
-        # pytest --cov=. --cov-report=xml
         echo "Тесты пока не настроены"
+        # pytest --cov=. --cov-report=xml
