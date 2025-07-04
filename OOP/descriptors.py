@@ -7,8 +7,10 @@ class PositiveNumber:
     def __set_name__(self, owner, name):
         self.name = name
 
+
 class Product:
     price = PositiveNumber()
+
 
 p = Product()
 p.price = 10

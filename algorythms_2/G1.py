@@ -1,11 +1,13 @@
-def binarySearch(list, item):
+def binary_search(m_list, item):
     low = 0
-    high = len(list) - 1  # в переменных low и high хранятся границы той части списка в которой выполняется поиск
+    high = (
+        len(m_list) - 1
+    )  # в переменных low и high хранятся границы той части списка в которой выполняется поиск
     # mid = (low + high) / 2  # Если значение low + high нечетное, то mid будет округлено в меньшую сторону
 
     while low <= high:  # пока эта часть не сократится до одного элемента ...
         mid = (low + high) // 2  # проверяем средний элемент
-        guess = list[mid]
+        guess = m_list[mid]
 
         if guess == item:  # значение найдено
             return mid
@@ -15,10 +17,11 @@ def binarySearch(list, item):
             low = mid + 1
     return None
 
+
 my_list = [1, 3, 5, 7, 9]
-print(binarySearch(my_list, 3))  # 1
-print(binarySearch(my_list, -1))  # None
-print(binarySearch(my_list, 7))
+print(binary_search(my_list, 3))  # 1
+print(binary_search(my_list, -1))  # None
+print(binary_search(my_list, 7))
 
 """
 # 1.1 Имеется отсортированный список из 128 имен, и вы ищете в нем зна- чение методом бинарного поиска. Какое максимальное количество проверок для этого может потребоваться?

@@ -4,13 +4,8 @@
 # Среднюю цену товаров.
 # Только для категорий с более чем 5 товарами.
 
-SELECT category,
-    COUNT(*) AS total_products, AVG(price) as average_price
-FROM store
-GROUP BY category
-HAVING COUNT(*) > 5
-
-
-
-
-
+# SELECT category,
+#     COUNT(*) AS total_products, AVG(price) as average_price
+# FROM store
+# GROUP BY category
+# HAVING COUNT(*) > 5

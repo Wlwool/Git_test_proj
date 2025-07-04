@@ -1,9 +1,11 @@
 import math
 
+
 # Реализация k-ближайших соседей
 def euclidean_distance(a, b):
     """Вычисляет евклидово расстояние между двумя точками."""
     return math.sqrt(sum((x - y) ** 2 for x, y in zip(a, b)))
+
 
 def knn(data, query, k):
     """
@@ -13,7 +15,8 @@ def knn(data, query, k):
     k: число соседей
     """
     # Вычисляем расстояния до всех точек
-    distances = [(euclidean_distance(features, query), label) for features, label in data]
+    distances = [(euclidean_distance(features, query), label)
+                 for features, label in data]
     # Сортируем по возрастанию расстояния
     distances.sort(key=lambda x: x[0])
     # Берём k ближайших
@@ -25,22 +28,19 @@ def knn(data, query, k):
     # Выбираем метку с максимальным числом голосов
     return max(votes.items(), key=lambda x: x[1])[0]
 
+
 # Пример данных: точки на плоскости с метками 'A' и 'B'
 dataset = [
-    ([1, 2], 'A'),
-    ([2, 3], 'A'),
-    ([3, 3], 'A'),
-    ([6, 5], 'B'),
-    ([7, 7], 'B'),
-    ([8, 6], 'B'),
+    ([1, 2], "A"),
+    ([2, 3], "A"),
+    ([3, 3], "A"),
+    ([6, 5], "B"),
+    ([7, 7], "B"),
+    ([8, 6], "B"),
 ]
 
 # Тестовые запросы
-test_points = [
-    [2, 2],
-    [5, 5],
-    [7, 5]
-]
+test_points = [[2, 2], [5, 5], [7, 5]]
 
 # Проверка работы алгоритма для разных k
 results = {}
@@ -69,20 +69,3 @@ for k, predicts in results.items():
 #   Точка [2, 2] -> Класс A
 #   Точка [5, 5] -> Класс B
 #   Точка [7, 5] -> Класс B
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

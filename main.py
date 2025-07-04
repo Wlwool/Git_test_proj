@@ -8,6 +8,7 @@
 
 print("Из обеих веток конфликт разрешен")
 
+
 class ListWrapper(list):
     def __init__(self, iterable):
         self._list = list(iterable)
@@ -19,10 +20,11 @@ class ListWrapper(list):
         return len(self._list)
 
     def __repr__(self):
-        return f"ListWrapper (length: {len(self)}, elements: {self._list})"
+        return f"ListWrapper (length: {len(self)}, elements: {self._list})"  # Вывод: ListWrapper (length: 3, elements: [1, 2, 3]) и т.д.
 
-wrapper = ListWrapper([1, 2, 3])
-print(wrapper)          # Вывод: ListWrapper (length: 3, elements: [1, 2, 3])
+
+wrapper = ListWrapper([1, 2, 3])  # Создаем обертку
+print(wrapper)  # Вывод: ListWrapper (length: 3, elements: [1, 2, 3])
 print(wrapper[0])
 
 

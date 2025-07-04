@@ -1,8 +1,10 @@
 """
-Ваша задача - реализовать класс, который принимает обозначение цвета палитры в формате HEX в виде строки и может
+Ваша задача - реализовать класс, который принимает обозначение цвета палитры
+в формате HEX в виде строки и может
 перевести его в формат RGB при помощи свойств red, green, blue.
 Для решения данной задачи напишите только реализацию класса Colour
 """
+
 
 class Colour:
     def __init__(self, hex_code):
@@ -14,7 +16,11 @@ class Colour:
 
     @hex_code.setter
     def hex_code(self, value):
-        if not (value.startswith("#") and len(value) == 7 and all(char in "0123456789abcdefABCDEF" for char in value[1:])):
+        if not (
+            value.startswith("#")
+            and len(value) == 7
+            and all(char in "0123456789abcdefABCDEF" for char in value[1:])
+        ):
             raise ValueError("Неверный формат HEX-кода")
         self._hex_code = value.lower()
 

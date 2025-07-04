@@ -193,7 +193,7 @@ SELECT title FROM movies WHERE year % 2 = 0;
 ```
 
 # Lesson 10: Queries with aggregates (Pt. 1)
-1. Find the longest time that an employee has been at the studio 
+1. Find the longest time that an employee has been at the studio
 ```sql
 SELECT MAX(Years_employed) FROM employees;
 ```
@@ -228,12 +228,12 @@ HAVING Role = 'Engineer';
 # Lesson 12: Order of execution of a Query
 1. Find the number of movies each director has directed
 ```sql
-SELECT Director, COUNT(Title) AS Amount_of_Movies FROM Movies 
+SELECT Director, COUNT(Title) AS Amount_of_Movies FROM Movies
 GROUP BY Director;
 ```
 2. Find the total domestic and international sales that can be attributed to each director
 ```sql
-SELECT Director, SUM(Domestic_sales + International_sales) AS Sales FROM Movies 
+SELECT Director, SUM(Domestic_sales + International_sales) AS Sales FROM Movies
 INNER JOIN Boxoffice  ON
 Movies.Id = Boxoffice.Movie_id
 GROUP BY Director;
@@ -244,7 +244,7 @@ GROUP BY Director;
 ```sql
 INSERT INTO Movies VALUES (4, 'Toy Story 4', 'John Lasseter', 2000,101);
 ```
-2. Toy Story 4 has been released to critical acclaim! It had a rating of 8.7, and made 340 million 
+2. Toy Story 4 has been released to critical acclaim! It had a rating of 8.7, and made 340 million
     domestically and 270 million internationally. Add the record to the BoxOffice table.
 ```sql
 INSERT INTO Boxoffice VALUES(4,8.7,340000000,270000000);
@@ -270,7 +270,7 @@ UPDATE Movies
 SET Year = '1999'
 WHERE Title = 'Toy Story 2'
 ```
-3. Both the title and director for Toy Story 8 is incorrect! The title should be "Toy Story 3" 
+3. Both the title and director for Toy Story 8 is incorrect! The title should be "Toy Story 3"
     and it was directed by Lee Unkrich
 ```sql
 UPDATE Movies
@@ -293,7 +293,7 @@ DELETE FROM Movies WHERE Director = 'Andrew Stanton';
 – Name A string (text) describing the name of the database.
 – Version A number (floating point) of the latest version of this database.
 – Download_count An integer count of the number of times this database was downloaded.
-This table has no constraints. 
+This table has no constraints.
 ```sql
 CREATE TABLE Database
 (Name TEXT,
@@ -304,7 +304,7 @@ Download_count INTEGER);
 # Lesson 17: Altering tables
 1. Add a column named Aspect_ratio with a FLOAT data type to store the aspect-ratio each movie was released in.
 ```sql
-ALTER TABLE  Movies 
+ALTER TABLE  Movies
   ADD Aspect_ratio FLOAT;
 ```
 2. Add another column named Language with a TEXT data type to store the language that the movie

@@ -1,5 +1,6 @@
-from playwright.sync_api import sync_playwright
 import csv
+
+from playwright.sync_api import sync_playwright
 
 
 def get_books_and_publishers(output_path="books.csv"):
@@ -24,6 +25,7 @@ def get_books_and_publishers(output_path="books.csv"):
                 writer.writerow([title, publisher])
                 print(f"Title: {title}, Publisher: {publisher}")
         browser.close()
+
 
 if __name__ == "__main__":
     get_books_and_publishers()

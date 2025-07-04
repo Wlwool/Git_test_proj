@@ -4,11 +4,12 @@
 
 # Запрет атрибутов с цифрой
 
+
 class NoDigitAttrMeta(type):
     def __new__(cls, name, bases, dct):
         for attr in dct:
             if attr[0].isdigit():
-                raise ValueError(f'Атрибут {attr} начинается с цифры!')
+                raise ValueError(f"Атрибут {attr} начинается с цифры!")
         return super().__new__(cls, name, bases, dct)
 
 
