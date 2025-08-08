@@ -40,5 +40,5 @@
 - **certain** <details><summary>перевод</summary>определенный, уверенный, бесспорный</details>
 - **whenever** <details><summary>перевод</summary>всякий раз</details>
 - **in order to** <details><summary>перевод</summary>для того чтобы</details>
--  **instance** <details><summary>перевод</summary>пример, экземпляр</details>
+- **instance** <details><summary>перевод</summary>пример, экземпляр</details>
 - 
