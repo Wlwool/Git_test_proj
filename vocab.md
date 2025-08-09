@@ -41,4 +41,5 @@
 - **whenever** <details><summary>перевод</summary>всякий раз</details>
 - **in order to** <details><summary>перевод</summary>для того чтобы</details>
 - **instance** <details><summary>перевод</summary>пример, экземпляр</details>
+- **although** <details><summary>перевод</summary>хотя, не смотря на</details>
 - 
