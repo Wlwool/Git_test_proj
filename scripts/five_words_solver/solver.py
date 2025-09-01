@@ -4,6 +4,9 @@
 Вводить подсказки в чат-режиме:
 forbid а / pos 2 и / notpos 3 а / have е 2 / suggest
 
+для загрузки слов:
+https://raw.githubusercontent.com/Harrix/Russian-Nouns/refs/heads/main/dist/russian_nouns.txt | grep -x '.\{5\}' > words.txt
+
 """
 
 from collections import Counter, defaultdict
