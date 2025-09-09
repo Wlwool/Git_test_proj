@@ -77,22 +77,129 @@
 #
 #     return merge(left, right)
 
+#
+# def sliding_window(nums, k):
+#     result = []
+#     left = 0
+#     right = k
+#
+#     while right <= len(nums):
+#         result.append(nums[left:right])
+#         left += 1
+#         right += 1
+#
+#     return result
+#
+#
+#
+# nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# k = 3
+#
+# print(sliding_window(nums, k))
 
-def sliding_window(nums, k):
-    result = []
-    left = 0
-    right = k
+# def fib_memo(n, memo={}):
+#     if n in memo:
+#         print(f"Извлекаем из memo[{n}] = {memo[n]}")
+#         return memo[n]
+#
+#     if n <= 1:
+#         print(f"База: fib({n}) = {n}")
+#         return n
+#
+#     print(f"Вычисляем fib({n}) через fib({n-1}) + fib({n-2})")
+#     memo[n] = fib_memo(n - 1, memo) + fib_memo(n - 2, memo)
+#     print(f"Сохраняем memo[{n}] = {memo[n]}")
+#     return memo[n]
+#
+#
+# print("Результат:", fib_memo(5))
 
-    while right <= len(nums):
-        result.append(nums[left:right])
-        left += 1
-        right += 1
+# def climb_stairs(n, memo={}):
+#     for i in range(len(cost)-3, -1, -1):
+#         cost[i] += min(cost[i+1], cost[i+2])
+#
+#     return min(cost[0], cost[1])
+#
+#
+#
+# cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
+# print(climb_stairs(10, cost))
 
-    return result
+# import heapq
+# from collections import Counter
+#
+# def top_k_frequent(nums, k):
+#     # counts = Counter(nums)
+#     # if k == len(counts):
+#     #     return counts.keys()
+#     # else:
+#     #     return heapq.nlargest(k, counts.keys(), key=counts.get)
+#     heap = []
+#     for num, freq in Counter(nums).items():
+#         if len(heap) > k:
+#             heapq.heappush(heap, (freq, num))
+#         else:
+#             heapq.heappush(heap, (freq, num))
+#     return [num for freq, num in heapq.nlargest(k, heap)]
+#
+#
+# nums = [1,1,1,2,2,3,3,3,3]
+# k = 2
+# print(top_k_frequent(nums, k))  # [3, 1] или [3, 2] (правильно: самые частые)
+
+
+# import heapq
+#
+# class PriorityQueue:
+#     def __init__(self):
+#         self.heap = []
+#
+#     def enqueue(self, value, priority):
+#         heapq.heappush(self.heap, (priority, value))
+#
+#     def dequeue(self):
+#         if not self.is_empty():
+#             heapq.heappop(self.heap)
+#         return None
+#
+#     def peek(self):
+#         if not self.is_empty():
+#             return self.heap[0]
+#         else:
+#             return None
+#
+#     def is_empty(self):
+#         return len(self.heap) == 0
+#
+#
+# pq = PriorityQueue()
+# pq.enqueue("task1", 3)
+# pq.enqueue("task2", 1)
+# pq.enqueue("task3", 2)
+#
+# print(pq.dequeue())  # ("task2", 1) — у него самый высокий приоритет
+# print(pq.peek())     # ("task3", 2)
+#
 
 
 
-nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-k = 3
 
-print(sliding_window(nums, k))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
